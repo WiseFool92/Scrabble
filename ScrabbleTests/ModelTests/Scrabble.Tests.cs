@@ -22,5 +22,16 @@ namespace Scrabble.Tests
       // Assert
       Assert.AreEqual(typeof(string), Logic.Input.GetType());
     }
+
+    [TestMethod]
+    public void Dictionary_CreateKey_DictionaryValues()
+    {
+      // arrange
+      Logic testTwo = new Logic();
+      // act
+      Logic.CreateKey();
+      //assert
+      Assert.AreEqual(Logic.valueOne, Logic.tileValue[1]);
+    }
   }
 }

@@ -18,7 +18,7 @@ namespace ScrabbleEntry
         string input = Console.ReadLine();
         Logic.GetInput(input);
 
-        Logic.GetValue();
+        // Logic.GetValue();
         
 
       //   Console.WriteLine("Would you like to check another?\n\n[Y/N]");
