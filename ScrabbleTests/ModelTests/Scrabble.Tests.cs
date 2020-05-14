@@ -18,9 +18,9 @@ namespace Scrabble.Tests
       // Arrange
       Logic testOne = new Logic();
       // Act
-      Logic.GetInput("string");
+      testOne.GetInput("string");
       // Assert
-      Assert.AreEqual(typeof(string), Logic.Input.GetType());
+      Assert.AreEqual(typeof(string), testOne.Input.GetType());
     }
 
     [TestMethod]
@@ -29,9 +29,15 @@ namespace Scrabble.Tests
       // arrange
       Logic testTwo = new Logic();
       // act
-      Logic.CreateKey();
+      testTwo.CreateKey();
       //assert
-      Assert.AreEqual(Logic.valueOne, Logic.tileValue[1]);
+      Assert.AreEqual(testTwo.valueOne, testTwo.tileValue[1]);
+      Assert.AreEqual(testTwo.valueTwo, testTwo.tileValue[2]);
+      Assert.AreEqual(testTwo.valueThree, testTwo.tileValue[3]);
+      Assert.AreEqual(testTwo.valueFour, testTwo.tileValue[4]);
+      Assert.AreEqual(testTwo.valueFive, testTwo.tileValue[5]);
+      Assert.AreEqual(testTwo.valueEight, testTwo.tileValue[8]);
+      Assert.AreEqual(testTwo.valueTen, testTwo.tileValue[10]);
     }
   }
 }

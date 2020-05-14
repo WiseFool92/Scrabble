@@ -16,7 +16,7 @@ namespace ScrabbleEntry
         // Enter:
         Console.WriteLine("Please enter your word and we'll give you it's score!");
         string input = Console.ReadLine();
-        Logic.GetInput(input);
+        frontEnd.GetInput(input);
 
         // Logic.GetValue();
         

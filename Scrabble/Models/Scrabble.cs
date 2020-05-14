@@ -5,11 +5,22 @@ namespace Scrabble.Model
 {
   public class Logic
   {
-    public static string Input {get; set;}
-    public static Dictionary<int, List<string>> tileValue = new Dictionary<int, List<string>>();
-    public static List<string> valueOne = new List<string>();
+    public string Input {get; set;}
+    public Dictionary<int, List<string>> tileValue = new Dictionary<int, List<string>>();
+    public List<string> valueOne = new List<string>();
+    public List<string> valueTwo = new List<string>();
+    public List<string> valueThree = new List<string>();
+    public List<string> valueFour = new List<string>();
+    public List<string> valueFive = new List<string>();
+    public List<string> valueEight = new List<string>();
+    public List<string> valueTen = new List<string>();
     
-    public static void CreateKey()
+    public void GetInput(string input)
+    {
+      Input = input.ToLower();
+    }
+    
+    public void CreateKey()
     {
       Logic list = new Logic();
       valueOne.Add("a");
@@ -23,17 +34,38 @@ namespace Scrabble.Model
       valueOne.Add("s");
       valueOne.Add("t");
 
-    // List<string> valueTwo = new List<string>();
-    // valueOne.Add("d");
-    // valueOne.Add("g");
+      valueTwo.Add("d");
+      valueTwo.Add("g");
 
-    // List<string> valueThree = new List<string>();
-    
-    tileValue.Add(1, valueOne);
-    // tileValues.Add(2, valueTwo);
-    }
+      valueThree.Add("b");
+      valueThree.Add("c");
+      valueThree.Add("m");
+      valueThree.Add("p");
 
-    // public static void GetValue()
+      valueFour.Add("f");
+      valueFour.Add("h");
+      valueFour.Add("v");
+      valueFour.Add("w");
+      valueFour.Add("y");
+
+      valueFive.Add("k");
+
+      valueEight.Add("j");
+      valueEight.Add("x");
+
+      valueTen.Add("q");
+      valueTen.Add("z");
+
+      tileValue.Add(1, valueOne);
+      tileValue.Add(2, valueTwo);
+      tileValue.Add(3, valueThree);
+      tileValue.Add(4, valueFour);
+      tileValue.Add(5, valueFive);
+      tileValue.Add(8, valueEight);
+      tileValue.Add(10, valueTen);
+      }
+
+    // public void GetValue()
     // {
     //   Console.WriteLine("inside GetValue");
     //   foreach (KeyValuePair<int, List<string>> kvp in tileValue)
@@ -45,9 +77,38 @@ namespace Scrabble.Model
     //   }
     // }
 
-    public static void GetInput(string input)
-    {
-      Input = input.ToLower();
-    }
   }
 }
+
+/*
+
+    private static Dictionary<char, int> _letterScores = new Dictionary<char, int>
+    {
+      { 'a', 1 },
+      { 'b', 3 },
+      { 'c', 3 },
+      { 'd', 2 },
+      { 'e', 1 },
+      { 'f', 4 },
+      { 'g', 2 },
+      { 'h', 4 },
+      { 'i', 1 },
+      { 'j', 8 },
+      { 'k', 5 },
+      { 'l', 1 },
+      { 'm', 3 },
+      { 'n', 1 },
+      { 'o', 1 },
+      { 'p', 3 },
+      { 'q', 10 },
+      { 'r', 1 },
+      { 's', 1 },
+      { 't', 1 },
+      { 'u', 1 },
+      { 'v', 4 },
+      { 'w', 4 },
+      { 'x', 8 },
+      { 'y', 4 },
+      { 'z', 10 }
+    };
+*/
