@@ -28,7 +28,7 @@ namespace ScrabbleEntry
         }
         else
         {
-          Environment.Exit(0);
+          run = false;
         }
       }
     }

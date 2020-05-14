@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-// using System.linq;
 
 namespace Scrabble.Model
 {
@@ -22,7 +21,8 @@ namespace Scrabble.Model
     {
       Input = input.ToLower();
     }
-
+    // int totalScore = 0;
+    
     public void GetValue()
     {
       foreach (KeyValuePair<int, List<string>> list in tileValue)
@@ -30,8 +30,15 @@ namespace Scrabble.Model
         foreach (string value in list.Value)
         {
           Console.WriteLine("Key = {0}, Value = {1}", list.Key, value);
+          // psuedo code - writing out the next logic steps
+          // if(value.Contains(Input))
+          // {
+          //   designate dictionary[list] containing input;
+          //   totalScore += list Key;
+          // }
         }
       }
+        // Console.WriteLine(totalScore);
     }
   }
 }

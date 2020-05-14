@@ -26,19 +26,13 @@ namespace Scrabble.Tests
     [TestMethod]
     public void Dictionary_CreateKey_DictionaryValues()
     {
-      // arrange
+      // Arrange
       Logic testTwo = new Logic();
-      // act
+      // Act
       testTwo.GetValue();
-      //assert
+      // Assert
       Console.WriteLine(testTwo.tileValue[1]);
       Assert.AreEqual("testTwo.Dictionary[0]", testTwo.tileValue[1]);
-      // Assert.AreEqual(testTwo.valueTwo, testTwo.tileValue[2]);
-      // Assert.AreEqual(testTwo.valueThree, testTwo.tileValue[3]);
-      // Assert.AreEqual(testTwo.valueFour, testTwo.tileValue[4]);
-      // Assert.AreEqual(testTwo.valueFive, testTwo.tileValue[5]);
-      // Assert.AreEqual(testTwo.valueEight, testTwo.tileValue[8]);
-      // Assert.AreEqual(testTwo.valueTen, testTwo.tileValue[10]);
     }
   }
 }
