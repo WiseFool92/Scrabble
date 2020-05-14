@@ -18,7 +18,7 @@ namespace ScrabbleEntry
         string input = Console.ReadLine();
         frontEnd.GetInput(input);
 
-        // frontEnd.GetValue();
+        frontEnd.GetValue();
         
         Console.WriteLine("Would you like to check another?\n\n[Y/N]");
         string addNew = (Console.ReadLine().ToLower());

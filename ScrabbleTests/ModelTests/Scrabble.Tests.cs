@@ -29,9 +29,10 @@ namespace Scrabble.Tests
       // arrange
       Logic testTwo = new Logic();
       // act
-      // testTwo.CreateKey();
+      testTwo.GetValue();
       //assert
-      Assert.AreEqual("testTwo.[0]", testTwo.tileValue[1]);
+      Console.WriteLine(testTwo.tileValue[1]);
+      Assert.AreEqual("testTwo.Dictionary[0]", testTwo.tileValue[1]);
       // Assert.AreEqual(testTwo.valueTwo, testTwo.tileValue[2]);
       // Assert.AreEqual(testTwo.valueThree, testTwo.tileValue[3]);
       // Assert.AreEqual(testTwo.valueFour, testTwo.tileValue[4]);
